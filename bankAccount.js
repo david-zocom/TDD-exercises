@@ -1,7 +1,7 @@
 /*
 1. Write test cases for the functions: balance, deposit, withdraw, transferFunds (red)
 2. Implement the functions (green)
-3. Start with nr. 1!!
+3. Start from 1!
 */
 class BankAccount {
 	// You don't need to test the constructor in this exercise.
