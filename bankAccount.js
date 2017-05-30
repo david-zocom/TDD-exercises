@@ -4,19 +4,14 @@
 3. Start from 1!
 */
 class BankAccount {
-	// You don't need to test the constructor in this exercise.
+	/*
+	You don't need to test the constructor in this exercise.
+	*/
 	constructor() {
 		this.accountNo = 1001;
-		this.balance = 0;
+		this.balance = 0;  // balance should only be modified in the functions deposit and withdraw
 	}
-	
-	/*
-	Returns the current balance of the account. Accounts start at zero and cannot be negative.
-	*/
-	balance() {
-		throw new Error('Not implemented yet');
-	}
-	
+		
 	/*
 	Returns true if the money was successfully deposited.
 	Throws Error('Bad parameter') if amount is something other than a number, that is greater than 0 and less than positive infinity.
