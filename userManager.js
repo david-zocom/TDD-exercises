@@ -56,7 +56,7 @@ class UserManager {
 	}
 	loginSuccessful(username, password) {
 		throw new Error('Not implemented yet');
-		// user verifyPassword
+		// use verifyPassword
 	}
 }
 
