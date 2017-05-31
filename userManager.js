@@ -26,7 +26,7 @@ class UserManager {
 	registerUser(username, password) {
 		// ... your code here ...
 		// When you write test cases, you will discover that this function isn't finished yet. You may only add lines above this comment.
-		this.userDb.addUser(username, password)
+		return this.userDb.addUser(username, password)
 	}
 	
 	/*
