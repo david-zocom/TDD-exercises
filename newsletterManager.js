@@ -5,19 +5,21 @@ class NewsletterManager {
 	}
 	
 	// returns true if user was added to firebase
-	// throws Error('Already subscribed') if user already subscribed
-	// return false if invalid name or emailAddress
+	// return false if user already subscribed
+	// throws Error('Invalid parameter(s)') if invalid name or emailAddress
 	subscribeUser(name, emailAddress) {
 		// this implementation is probably not going to pass testing...
-		this.db.addUser(name, emailaddress);
+		if( this.db.doesUserExist(emailAddress) )
+			return false;
+		return this.db.addUser(name, emailAddress);
 	}
 	
 	// returns true if user was unsubscribed from firebase
-	// throws Error('Not subscribed') if user not subscribed
-	// return false if invalid emailAddress
+	// return false if user not subscribed
+	// throws Error('Invalid parameter(s)') if invalid emailAddress
 	unsubscribeUser(emailAddress) {
 		// this implementation is probably not going to pass testing...
-		this.db.removeUser(name, emailaddress);
+		return this.db.removeUser(name, emailAddress);
 	}
 }
 
@@ -37,3 +39,5 @@ class NewsletterDatabase {
 	}
 	
 }
+
+module.exports = NewsletterManager;
